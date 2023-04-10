@@ -1,19 +1,430 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Chatbox</title>
-    <link rel="stylesheet" type="text/css" href="css/appstyle.css">
-  </head>
-  <body>
-    <div class="chatbox">
-      <div class="chatlog">
-      </div>
-      <div class="message-input">
-        <button id="button-1">Who is this?</button>
-        <button id="button-2">Where am I?</button>
-      </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Chatbox</title>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">
+        <script defer src="appscripts/main.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    </head>
+
+<body>
+<div class="center">
+    <div class="contacts">
+        <i class="fas fa-bars fa-2x"></i>
+        <h2>
+            Contacts
+        </h2>
+        <div class="contact" id="firstContact">
+            <div class="pic rogers"><img src="resources/eyeIcon.png" class="profilePic"></div>
+            <div class="name">
+                Iris
+            </div>
+            <div class="message">
+                That is America's ass 🇺🇸🍑
+            </div>
+        </div>
+        <div class="contact" id="secondContact">
+            <div class="pic stark"></div>
+            <div class="name">
+                Jake
+            </div>
+            <div class="message">
+                Uh, he's from space, he came here to steal a necklace from a wizard.
+            </div>
+        </div>
+        <div class="contact" id="thirdContact">
+            <div class="pic danvers"></div>
+            <div class="name">
+                Mom
+            </div>
+            <div class="message">
+                There's an Ant-Man *and* a Spider-Man?
+            </div>
+        </div>
+
+        <!-- <div class="contact">
+            <div class="pic thor"></div>
+            <div class="name">
+                Thor Odinson
+            </div>
+            <div class="badge">
+                3
+            </div>
+            <div class="message">
+                I like this one
+            </div>
+        </div>
+        <div class="contact">
+            <div class="pic danvers"></div>
+            <div class="badge">
+                2
+            </div>
+            <div class="name">
+                Carol Danvers
+            </div>
+            <div class="message">
+                Hey Peter Parker, you got something for me?
+            </div>
+        </div> -->
     </div>
-    <script src="appscripts/main.js"></script>
-  </body>
+    
+    <div class="chat" id="tonyStark">
+        <div class="contact bar">
+            <a href="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/7/73/SMH_Mentor_6.png"><div class="pic stark"></div></a>
+            <div class="name">
+                Jake
+            </div>
+            <div class="seen" id="lastSeen">
+                Last seen 30 mins ago
+            </div>
+        </div>
+        <div class="messages" id="chat">
+            <div class="time">
+                Oct 5, 2023
+            </div>
+            <div class="message parker">
+                Hey, did you finish the final report yet?
+            </div>
+            <div class="message stark">
+                Of course, I'm not as slow as you.
+            </div>
+            <div class="message parker">
+                Oey. I'm not slow, I just like to take my time.
+            </div>
+            <div class="message stark">
+                suuuuuuure.
+            </div>
+            <div class="message parker">
+                I'm completely good. No idea what you're talking about.
+            </div>
+            <div class="message parker">
+                but also, i'm obviously worried that your essay is not nearly as good as mine. You wanna review each other's?
+            </div>
+            <div class="message stark">
+                Fine, but you better not be overly critical for no reason
+            </div>
+            <div class="message parker">
+                I won't, I won't
+            </div>
+            <div class="message parker">
+                I was having a bit of trouble with my encryption converter. Can you focus on that part?
+            </div>
+            <div class="message stark">
+                "I'm completely good"
+            </div><div class = "message stark">
+                ... brother
+            </div>
+            <div class = "message stark">
+                i think the only thing you're missing is your own key
+            </div>
+            <div class="message parker">
+                OML, i have 0 iq. Can't believe it was just that 1 number holding everything up. 
+            </div>
+            <div class="message stark">
+                ye dw dude. Happens all the time
+            </div>
+            <div class="message parker">
+                Nice. I'm gonna try to make my own encryption on my phone now
+            </div>
+            <div class="message stark">
+                what are you setting for your key?
+            </div>
+            <div class="message parker">
+                wtf. Why do you want to know?
+            </div>
+            <div class="message stark">
+                So I can look through all of your juicy stuff obviously.
+            </div>
+            <div class="message parker">
+                Ew no.
+            </div>
+            <div class="message parker">
+                Actually you know what? I'll tell you. It's the number of my favourite pokemon
+            </div>
+            <div class="message stark">
+                errrr. Crap. brb
+            </div>
+            <div class="message parker">
+                wooow. HAHAHA. Can't believe you forgot :p
+            </div>
+
+            <div class="time">
+                April 7, 2023
+            </div>
+            <div class="message parker">
+                Hey, what do you think of Remy in this new shirt?
+            </div>
+            <div class="message parker"><a href=https://cdn.media.amplience.net/s/hottopic/19512268_hi><img src="https://cdn.media.amplience.net/s/hottopic/19512268_hi" id="gengarImage"></a></div>
+            <div class="message stark">
+                Yes, I think he'll look adorable! I wish I could have a cat like him. I see you even have your favourite Gengar on the shirt.
+            </div>
+            <div class="message parker">
+                You should come over and hang sometime. I'm planning on having a small birthday party for Remy next week.
+            </div>
+            <div class="message stark">
+                That sounds like fun! I'll definitely come. What are you planning for his birthday?
+            </div>
+            <div class="message parker">
+                Just some cat-friendly treats and toys. Maybe some tuna fish cake too.
+            </div>
+            <div class="message stark">
+                Haha, that's awesome. I'll bring some catnip and a gift for him. Can't wait to celebrate with Remy!
+            </div>
+            <div class="message parker">
+                Thanks, I know he'll be excited to have his friends over. And speaking of birthdays, have you decided what you want to do for yours next month?
+            </div>
+            <div class="message stark">
+                Not yet, but I was thinking of having a LAN party and inviting some friends over to play games. Wanna come and hang?
+            </div>
+            <div class="message parker">
+                Hell ye that sounds like a lot of fun. We haven't met eachother since the first week of uni.
+            </div>
+            <div class="message stark">
+                IK right. Look forward to seeing you there
+            </div>
+            
+            
+            <div class="time">
+                April 15, 2023
+            </div>
+            <div class="message stark">
+                Hey yo dude, sorry for letting you know so last minute. I'm a bit cought up with work rn so idt I can make it for remy's birthday
+            </div>
+            <div class ="message parker">
+                ohh dang.
+            </div>
+            <div class ="message parker">
+                don't worry about it man. It's all good
+            </div>
+            <div class="message stark">
+                I'll make it up to you with lunch day after?
+            </div>
+            <div class="message parker">
+                Yeah, that sounds good. I'll see you there
+            </div>
+            <div class="message stark">
+                Also, i heard your mom had an incident while diving. Is she alright?
+            </div>
+            <div class="message parker">
+                Oh yeah, it wasn't anything serious. Just that her phone got damaged and there isn't any way to text her for now
+            </div>
+            <div class="message parker">
+                Her landline is working though. She wasn't physically hurt either
+            </div>
+            <div class="message stark">
+                good to hear. I was slightly worried
+            </div>
+
+            <div class="time">
+                April 20, 2023
+            </div>
+            <!-- <div class="message stark">
+            <div class="typing typing-1"></div>
+            <div class="typing typing-2"></div>
+            <div class="typing typing-3"></div>
+            </div> -->
+        </div>
+        <div class="input">
+            <input placeholder="Message" type="text" id="inputText" value="" readonly><i class="fas fa-paper-plane" id="sendButton"></i>
+        </div>
+        <table>
+            <tr>
+                <td><div class="storyOption" id="option11">
+                </div></td>
+                <td><div class="storyOption" id="option12">
+                </div></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="chat" id="steveRogers">
+        <div class="contact bar">
+            <a href="resources/eyeIcon.png">
+            <div class="pic rogers"><img src="resources/eyeIcon.png" class="profilePic"></div></a>
+            <div class="name">
+                Iris
+            </div>
+            <div class="seen">
+                Currently Active
+            </div>
+        </div>
+        <div class="messages">
+            <div class="time">
+                Today
+            </div>
+            <div class="message stark">
+                <p>This phone has not been active for 2 days. Please enter password to send messages to other contacts.</p>
+                <p>DDMMYY</p>
+            </div>
+            <!-- <div class="message stark">
+            <div class="typing typing-1"></div>
+            <div class="typing typing-2"></div>
+            <div class="typing typing-3"></div>
+            </div> -->
+        </div>
+        <div class="input">
+            <input placeholder="Message" type="text" value="" id="textOption"><i class="fas fa-paper-plane" id="textSendButton"></i>
+        </div>
+    </div>
+
+    <div class="chat" id="bruceBanner">
+        <div class="contact bar">
+            <a href="https://vignette.wikia.nocookie.net/marvelcinematicuniverse/images/0/05/HeyPeterParker.png"><div class="pic danvers"></div></a>
+            <div class="name">
+                Mom
+            </div>
+            <div class="seen">
+                Last seen 1 week ago
+            </div>
+        </div>
+        <div class="messages">
+            <div class="time">
+                October 1, 2022
+            </div>
+            <div class="message stark">
+                Hi Honey, how are you doing today?
+            </div>
+            <div class="message parker">
+                I'm doing well, thanks for asking.
+            </div>
+            <div class="message stark">
+                That's good to hear. Did you eat breakfast this morning?
+            </div>
+            <div class="message parker">
+                Yes, I had some toast and coffee.
+            </div>
+            <div class="message stark">
+                Okay, make sure to eat a balanced diet and get enough nutrients throughout the day.
+            </div>
+            <div class="message parker">
+                I will, mom. Thanks for reminding me.
+            </div>
+            <div class="message stark">
+                Have you been staying on top of your assignments at school?
+            </div>
+            <div class="message parker">
+                Yes, I've been keeping up with my coursework.
+            </div>
+            <div class="message stark">
+                Good, I'm proud of you. And have you been getting enough rest?
+            </div>
+            <div class="message parker">
+                Yeah, I've been getting about 8 hours of sleep each night.
+            </div>
+            <div class="message stark">
+                That's great, keep up the good work. And have you been socializing with your friends?
+            </div>
+            <div class="message parker">
+                Yes, I went to a hackathon with Friend B last weekend.
+            </div>
+            <div class="message stark">
+                Okay, just make sure to keep a balance between your social life and your academic responsibilities.
+            </div>
+            <div class="message parker">
+                I will, mom. Thanks for checking up on me.
+            </div>
+            <div class="message stark">
+                Of course, I just want to make sure you're taking care of yourself. Let me know if you need anything.
+            </div>
+            <div class="message parker">
+                Will do, thanks mom.
+            </div>
+            
+
+            <div class="time">
+                April 11, 2023
+            </div>
+            <div class="message parker">
+                Mom, did you know today is Remy's birthday?
+            </div>
+            <div class="message stark">
+                Oh really? I didn't know that.
+            </div>
+            <div class="message parker">
+                Yeah, I think he's turning three today.
+            </div>
+            <div class="message stark">
+                Well, we should definitely do something special for him. Maybe we can get him some special treats or a new toy.
+            </div>
+            <div class="message parker">
+                That's a great idea! And we should sing happy birthday to him too.
+            </div>
+            <div class="message stark">
+                Definitely. Remy is a special part of our family and he deserves to be celebrated.
+            </div>
+            <div class="message parker">
+                Yeah, he's the best cat ever. I'm so glad we adopted him.
+            </div>
+            <div class="message stark">
+                Me too. He brings so much joy to our lives. Let's make sure he has the best birthday ever.
+            </div>
+
+
+            <div class="time">
+                April 12, 2023
+            </div>
+            <div class="message stark">
+                Hey sweetie, how was your day?
+            </div>
+            <div class="message parker">
+                It was okay, I guess. I'm supposed to hang out with Jake day after
+            </div>
+            <div class="message parker">
+                which is fine. I've been close to him forever. But I feel a bit weird
+            </div>
+            <div class="message stark">
+                What do you mean?
+            </div>
+            <div class="message parker">
+                I don't know, it's like we've grown apart. We used to be so close, but now it just feels like we're acquaintances.
+            </div>
+            <div class="message stark">
+                That can be tough. Have you talked to Jake about how you feel?
+            </div>
+            <div class="message parker">
+                No, I don't know if I want to. I don't want to make things awkward between us.
+            </div>
+            <div class="message stark">
+                I understand, but it's important to communicate your feelings. Maybe they're feeling the same way.
+            </div>
+            <div class="message parker">
+                Maybe. But what if we just don't have anything in common anymore?
+            </div>
+            <div class="message stark">
+                That's possible, but it's also possible to have different interests and still maintain a friendship. It just takes effort and compromise.
+            </div>
+            <div class="message parker">
+                I know, but it just feels like we're on different paths now.
+            </div>
+            <div class="message stark">
+                I understand how you feel. But remember, friendships change and evolve over time. It's normal to drift apart from people.
+            </div>
+            <div class="message parker">
+                I guess so. It's just hard because we've been friends for so long.
+            </div>
+            <div class="message stark">
+                I know, sweetie. But you'll always have the memories and experiences you shared together. And who knows, maybe in the future you'll find that you have more in common again.
+            </div>
+            <div class="message parker">
+                Yeah, you're right. Thanks for listening, mom.
+            </div>
+            <div class ="message stark">
+                Anytime, honey. And remember, I'm here for you if you need to talk.
+            </div>
+
+
+            
+            <!-- <div class="message stark">
+            <div class="typing typing-1"></div>
+            <div class="typing typing-2"></div>
+            <div class="typing typing-3"></div>
+            </div> -->
+        </div>
+        <div class="input">
+            <input placeholder="Message" type="text" value="" disabled><i class="fas fa-paper-plane"></i>
+        </div>
+    </div>
+</div>
+</body>
 </html>
