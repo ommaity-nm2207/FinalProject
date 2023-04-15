@@ -305,3 +305,26 @@ th, td {
   height:auto;
   max-width: 64px;
 }
+
+.title {
+  text-align: center;
+}
+
+.fa-question-circle:hover {
+  background-color:#7b7b7b;
+  border-radius: 1.125rem 1.125rem 1.125rem 1.125rem;
+}
+
+.fa-question-circle {
+  font-size: 48px;
+}
+
+#hint:hover {
+  background-color:#7b7b7b;
+  border-radius: 1.125rem 1.125rem 1.125rem 1.125rem;
+}
+
+.right {
+  text-align: right;
+  margin-left: 1375px;
+}

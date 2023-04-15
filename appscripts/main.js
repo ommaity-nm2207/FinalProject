@@ -22,11 +22,11 @@ decryption = false;
 const responseList = {
     "wrongPassword": ["Password is incorrect", "Hint: Your pet cat's birthday"],
     "wrongDecryption": ["Decryption key is incorrect, Please try again"],
-    "110500": ["You can now access messaging rights", "As part of security protocols, your future messages and replies will be encrypted", " Please enter encryption key to decode"],
-    "4": ["Phone has now been decrypted. Thank you for using iris."],
+    "110420": ["You can now access messaging rights", "As part of security protocols, your future messages and replies will be encrypted", " Please enter encryption key to decode"],
+    "94": ["Phone has now been decrypted. Thank you for using iris."],
 
     "Hey, actually, I've been meaning to talk to you": ["Yeah, what's up?"],
-    "Can we be real for a while?":["yea of course. What's up?"],
+    "Can I be real for a while?":["yea of course. What's up?"],
 
     "I've been okay I guess. But lunch the other day felt kind of awkward": ["How come? We hadn't met up in a while", "was great getting to catch up!"],
     "I just feel like we've grown apart": ["I know what you mean :p", "Life hasn't been quite as fun since we went to different unis"],
@@ -59,7 +59,7 @@ const responseList = {
 const buttonChanges = {
 
     "Hey, actually, I've been meaning to talk to you":["I've been okay I guess. But lunch the other day felt kind of awkward","I've been dealing with a lot of stress"],
-    "Can we be real for a while?":["I've been okay I guess. But lunch the other day felt kind of awkward","I've been dealing with a lot of stress"],
+    "Can I be real for a while?":["I've been okay I guess. But lunch the other day felt kind of awkward","I've been dealing with a lot of stress"],
     
     "I've been okay I guess. But lunch the other day felt kind of awkward":["I just feel like we've grown apart","I miss hanging out with you every day"],
     "I just feel like we've grown apart":["life isn't really gonna stop for us though", "we can try to make it more fun. You wanna meet more regularly?"],
@@ -105,7 +105,6 @@ function sendReply(a) {
         }, delay)
         addDiv.innerText = (responseList[a])[elem];
     }
-    
 }
 
 // helper function for when the key is pressed
@@ -213,9 +212,9 @@ function responsePicker(tov) {
         }
     } else {
         if (password == false) {
-            if (tov == "110500") {
+            if (tov == "110420") {
                 sendMessage(tov);
-                sendReply("110500");
+                sendReply("110420");
                 password = true;
             } else {
                 sendMessage(tov);
@@ -223,9 +222,9 @@ function responsePicker(tov) {
             }
         } else {
             if (password == true) {
-                if (tov == "4") {
+                if (tov == "94") {
                     sendMessage(tov);
-                    sendReply("4");
+                    sendReply("94");
                     decryption = true;
                     textOption.disabled = true;
                 } else {
@@ -310,6 +309,12 @@ function eventListenerCompendium() {
         if (option11.innerText == false) {
             return;
         } else {
+            console.log(option11.innerText)
+            if (option11.innerText == "that sounds great!" || option11.innerText == "honesty is one thing. Pessimistic is another. I don't need your attitude") {
+                setTimeout(function() {
+                    alert("You have completed the game. Refresh the page to try different dialogue options")
+                },5000)
+            } 
             pressOption(option11.innerText);
             option11.classList.remove("ifHover");
         }
@@ -318,6 +323,11 @@ function eventListenerCompendium() {
         if (option12.innerText == false) {
             return;
         } else {
+            if (option12.innerText == "dang. I might be busy. I'll let you know by end of the week" || option12.innerText == "you clearly don't understand what I'm going through") {
+                setTimeout(function() {
+                    alert("You have completed the game. Refresh the page to try different dialogue options")
+                },5000)
+            } 
             pressOption(option12.innerText);
             option12.classList.remove("ifHover");
         }
@@ -343,3 +353,13 @@ function eventListenerCompendium() {
         option12.classList.remove("ifHover")
     })
 }
+
+document.getElementById("about").addEventListener("click", function() {
+    console.log("hello")
+    alert("This is a game where you play as an unnamed character. Read through the chats to figure out what is going on. Try to crack the password and decryption code, and engage in a heart to heart with your best friend Jake")
+})
+
+document.getElementById("hint").addEventListener("click", function() {
+    console.log("hello")
+    alert("The password is the Remy's birthday. The player talks to mom about Remy's birthday. Remy is also 3 years old. The decryption code is the users favrouite pokemon number. This number appears in a picture in the chat with Jake")
+})
